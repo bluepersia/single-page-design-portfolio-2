@@ -3,6 +3,7 @@
 .work
 {
     text-align: center; 
+    margin-bottom: 6.25em;
 
     &__title
     {
@@ -96,7 +97,7 @@
 {
     .work
     {
-        margin-bottom: 3.1em;
+        margin-bottom: 7em;
 
         &__title
         {
@@ -133,5 +134,13 @@
         {
             left: calc(50% - (min(72%, 540px) / 2) - (min(72%, 540PX) + 2em));
         }
+    }
+}
+
+
+@media (min-width:1440px)
+{
+    .work {
+        margin-bottom: 4.88em;
     }
 }

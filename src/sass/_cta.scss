@@ -1,0 +1,61 @@
+
+
+.cta 
+{
+    text-align: center;
+    background-color: $color-Black;
+    padding: 3em 1.5em;
+    width: 91.4%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+
+    > * {
+        max-width: 540px;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    &__title 
+    {
+        @extend .heading-m;
+        color:$color-White; 
+    }
+
+    &__body 
+    {
+        color: $color-White;
+    }
+
+    &__btn 
+    {
+        @extend .btn;
+        @extend .btn--red;
+        margin-top: 1.71em;
+    }
+}
+
+@media (min-width:768px)
+{
+    .cta {
+        padding:3.11em 4em 3.55em;
+    }
+}
+
+
+@media (min-width:1440px)
+{
+    .cta 
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+        padding: 4.5em 3.6em 4.44em;
+
+        &__content
+        {
+            margin-left: 0;
+        }
+    }
+}
