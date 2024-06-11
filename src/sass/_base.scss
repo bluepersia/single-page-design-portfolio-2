@@ -1,0 +1,33 @@
+$color-Black: #030303;
+$color-MediumBrown: #7A746E;
+$color-LightCream: #FFF7F0;
+$color-GalacticBlue: #755CDE;
+$color-SummerYellow: #F6A560;
+$color-Pink: #F39E9E;
+$color-LightRed: #EB7565;
+$color-Cyan: #61C4B7;
+$color-DarkPurple: #552049;
+
+body 
+{
+    margin:0;
+    color:$color-Black;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+p {
+    line-height: 1.6;
+    color: $color-MediumBrown;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*:first-child {
+    margin-top: 0;
+}
+
+*:last-child {
+    margin-bottom: 0;
+}
