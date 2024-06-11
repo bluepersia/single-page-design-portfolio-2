@@ -1,0 +1,32 @@
+
+
+.logo
+{
+    width: 48px;
+    height: 48px;
+}
+
+.btn 
+{
+    border:none;
+    background-color: $color-Black;
+    color: $color-White;
+    padding: .57em 1.92em;
+    border-radius: 28px;
+    transition: all 300ms;
+    font-size: .875rem;
+    font-family: inherit;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-GalacticBlue;
+    }
+}
+
+
+@media (min-width:768px)
+{
+    .btn {
+        font-size: .88rem;
+    }
+}
