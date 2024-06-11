@@ -1,0 +1,77 @@
+
+
+.header
+{
+    padding: 1em 4.2% 2em;
+    text-align: center;
+
+    
+}
+
+
+.masthead 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4em;
+
+    &__logo 
+    {
+        @extend .logo;
+    }
+
+    &__btn
+    {
+        @extend .btn;
+    }
+}
+
+.hero {
+
+    max-width: 752px;
+    margin-left: auto;
+    margin-right: auto;
+ 
+
+    &__title
+    {
+        font-size: 2.25rem;
+    }
+}
+
+
+
+@media (min-width: 768px)
+{
+    .header {
+        padding: 1.88em 5% 3.55em;
+    }
+
+    .masthead {
+        margin-bottom: 3.55em;
+    }
+
+    .hero {
+        &__title
+        {
+            font-size: 2.44rem;
+        }
+    }
+}
+
+
+@media (min-width:1440px)
+{
+    .header 
+    {
+       padding: 1.88em 11.4% 4.44em;
+    }
+
+    .hero {
+        &__title
+        {
+            font-size: 3.11rem;
+        }
+    }
+}
