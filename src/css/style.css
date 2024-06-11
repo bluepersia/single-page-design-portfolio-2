@@ -32,7 +32,7 @@ p {
   height: 48px;
 }
 
-.btn, .masthead__btn {
+.btn, .profile__btn, .masthead__btn {
   border: none;
   background-color: #030303;
   color: white;
@@ -43,13 +43,28 @@ p {
   font-family: inherit;
   cursor: pointer;
 }
-.btn:hover, .masthead__btn:hover {
+.btn:hover, .profile__btn:hover, .masthead__btn:hover {
   background-color: #755CDE;
+}
+.btn--red, .profile__btn {
+  background-color: #EB7565;
+}
+
+.heading-m, .profile__title {
+  font-size: 1.625rem;
 }
 
 @media (min-width: 768px) {
-  .btn, .masthead__btn {
+  .btn, .profile__btn, .masthead__btn {
     font-size: 0.88rem;
+  }
+  .heading-m, .profile__title {
+    font-size: 1.77rem;
+  }
+}
+@media (min-width: 1440px) {
+  .heading-m, .profile__title {
+    font-size: 2.22rem;
   }
 }
 .header {
@@ -163,6 +178,7 @@ p {
   .skills__skill--design {
     grid-column: 1/2;
     grid-row: 1/3;
+    height: 100%;
   }
   .skills__skill--ui {
     grid-column: 2/3;
@@ -187,6 +203,7 @@ p {
 }
 @media (min-width: 1440px) {
   .skills {
+    padding: 0 11.4%;
     grid-template-columns: 31% 14% 14% 31%;
     column-gap: 2.1%;
   }
@@ -213,6 +230,60 @@ p {
   .skills__skill--motion {
     grid-column: 4/-1;
     grid-row: 2/3;
+  }
+}
+.profile {
+  padding: 6.25em 4.2%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+}
+.profile__img {
+  display: block;
+  width: min(87%, 890px);
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+}
+.profile__content {
+  max-width: 540px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.profile__btn {
+  margin-top: 1.71em;
+}
+
+@media (min-width: 768px) {
+  .profile {
+    padding-left: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    gap: 0;
+  }
+  .profile__img {
+    width: 47%;
+    position: relative;
+    left: -3em;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .profile__content {
+    width: 43%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (min-width: 1440px) {
+  .profile {
+    padding: 7.5em 11.4% 4.8%;
+  }
+  .profile__img {
+    left: 0;
   }
 }
 
