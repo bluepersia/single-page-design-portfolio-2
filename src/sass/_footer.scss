@@ -1,0 +1,34 @@
+.footer 
+{
+    padding: 2.43em 4.2% 2em;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo 
+    {
+        @extend .logo;
+    }
+
+    &__btn 
+    {
+        @extend .btn;
+    }
+}
+
+
+@media (min-width:768px)
+{
+    .footer 
+    {
+        padding: 3.1em 5%;
+    }
+}
+
+@media (min-width:1440px)
+{
+    .footer {
+        padding: 3.1em 11.4% 3.55em;
+    }
+}
