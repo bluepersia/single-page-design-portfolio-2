@@ -32,7 +32,7 @@ p {
   height: 48px;
 }
 
-.btn, .profile__btn, .masthead__btn {
+.btn, .cta__btn, .profile__btn, .masthead__btn {
   border: none;
   background-color: #030303;
   color: white;
@@ -43,27 +43,27 @@ p {
   font-family: inherit;
   cursor: pointer;
 }
-.btn:hover, .profile__btn:hover, .masthead__btn:hover {
+.btn:hover, .cta__btn:hover, .profile__btn:hover, .masthead__btn:hover {
   background-color: #755CDE;
 }
-.btn--red, .profile__btn {
+.btn--red, .cta__btn, .profile__btn {
   background-color: #EB7565;
 }
 
-.heading-m, .profile__title {
+.heading-m, .cta__title, .profile__title {
   font-size: 1.625rem;
 }
 
 @media (min-width: 768px) {
-  .btn, .profile__btn, .masthead__btn {
+  .btn, .cta__btn, .profile__btn, .masthead__btn {
     font-size: 0.88rem;
   }
-  .heading-m, .profile__title {
+  .heading-m, .cta__title, .profile__title {
     font-size: 1.77rem;
   }
 }
 @media (min-width: 1440px) {
-  .heading-m, .profile__title {
+  .heading-m, .cta__title, .profile__title {
     font-size: 2.22rem;
   }
 }
@@ -288,6 +288,7 @@ p {
 }
 .work {
   text-align: center;
+  margin-bottom: 6.25em;
 }
 .work__title {
   font-size: 1.5rem;
@@ -350,7 +351,7 @@ p {
 }
 @media (min-width: 768px) {
   .work {
-    margin-bottom: 3.1em;
+    margin-bottom: 7em;
   }
   .work__title {
     margin-bottom: 1.75em;
@@ -374,6 +375,52 @@ p {
     100% {
       left: calc(50% - min(72%, 540px) / 2 - (min(72%, 540PX) + 2em));
     }
+  }
+}
+@media (min-width: 1440px) {
+  .work {
+    margin-bottom: 4.88em;
+  }
+}
+.cta {
+  text-align: center;
+  background-color: #030303;
+  padding: 3em 1.5em;
+  width: 91.4%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+.cta > * {
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta__title {
+  color: white;
+}
+.cta__body {
+  color: white;
+}
+.cta__btn {
+  margin-top: 1.71em;
+}
+
+@media (min-width: 768px) {
+  .cta {
+    padding: 3.11em 4em 3.55em;
+  }
+}
+@media (min-width: 1440px) {
+  .cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 4.5em 3.6em 4.44em;
+  }
+  .cta__content {
+    margin-left: 0;
   }
 }
 
