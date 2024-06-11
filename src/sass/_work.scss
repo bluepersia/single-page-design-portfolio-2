@@ -1,0 +1,137 @@
+
+
+.work
+{
+    text-align: center; 
+
+    &__title
+    {
+        font-size: 1.5rem;
+        margin-bottom: 1.33em;
+    }
+
+   &__content
+    {
+        display: flex;
+        gap:1em;
+        position: relative;
+        left: calc(50% - (min(72%, 540px) / 2) - (min(72%, 540PX) + 1em) );
+        width: 100%;
+        margin-bottom: 3.5em;
+
+        &--slide-to-right
+        {
+            animation-name: slide-to-right;
+            animation-duration: 500ms;
+            animation-fill-mode: forwards;
+        }
+
+        &--slide-to-left
+        {
+            animation-name: slide-to-left;
+            animation-duration: 500ms;
+            animation-fill-mode: forwards;
+        }
+        
+    }
+
+    &__img 
+    {
+        width: min(72vw, 540px);
+    }
+
+    &__btns
+    {
+        display: flex;
+        gap: 1em;
+        justify-content: center;
+    }
+
+    &__btn
+    {
+        width: 64px;
+        height: 64px;
+        background-color: $color-Black;
+        border-radius: 50%;
+        border:none;
+        cursor: pointer;
+        transition: all 300ms;
+        &:hover 
+        {
+            background-color: $color-GalacticBlue;
+        }
+    }
+}
+
+
+
+
+@keyframes slide-to-right {
+    
+    0%
+    {
+        left: calc(50% - (min(72%, 540px) / 2) - (min(72%, 540PX) + 1em));
+    }
+
+    100%
+    {
+        left: calc(50% - (min(72%, 540px) / 2) - ((min(72%, 540PX) + 1em) * 2));
+    }
+}
+
+@keyframes slide-to-left 
+{
+    0%
+    {
+        left: calc(50% - (min(72%, 540px) / 2) - ((min(72%, 540PX) + 1em) * 2));
+    }
+
+    100%
+    {
+        left: calc(50% - (min(72%, 540px) / 2) - (min(72%, 540PX) + 1em));
+    }
+}
+
+@media (min-width:768px)
+{
+    .work
+    {
+        margin-bottom: 3.1em;
+
+        &__title
+        {
+            margin-bottom: 1.75em;
+        }
+        &__content
+        {
+            gap:2em;
+            left: calc(50% - (min(72%, 540px) / 2) - (min(72%, 540PX) + 2em) ); 
+        }
+    }
+
+    @keyframes slide-to-right {
+    
+        0%
+        {
+            left: calc(50% - (min(72%, 540px) / 2) - (min(72%, 540PX) + 2em));
+        }
+    
+        100%
+        {
+            left: calc(50% - (min(72%, 540px) / 2) - ((min(72%, 540PX) + 2em) * 2));
+        }
+    }
+    
+    @keyframes slide-to-left 
+    {
+        0%
+        {
+            left: calc(50% - (min(72%, 540px) / 2) - ((min(72%, 540PX) + 2em) * 2));
+        }
+    
+        100%
+        {
+            left: calc(50% - (min(72%, 540px) / 2) - (min(72%, 540PX) + 2em));
+        }
+    }
+}
